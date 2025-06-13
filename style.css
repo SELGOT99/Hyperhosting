@@ -47,12 +47,7 @@ body {
     cursor: default;
   }
 
-  .logo img {
-  width: 100px;  
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
+  
 
 
 nav button.cta-button {
@@ -257,7 +252,7 @@ footer {
 /* Responsive Menu */
 .responsive-header {
   background-color: #004080;
-  padding: 15px 20px;
+  padding: 10px 20px;
   color: white;
   position: sticky;
   top: 0;
@@ -266,6 +261,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   font-family: 'Cairo', sans-serif;
+}
 
 .responsive-header .logo {
   font-size: 1.4em;
@@ -293,36 +289,29 @@ footer {
   padding: 8px 12px;
   transition: background 0.3s;
   border-radius: 5px;
-  
 }
-
 
 .responsive-nav a:hover {
   background-color: #0066cc;
 }
 
 /* Mobile */
-/* داخل media query */
 @media (max-width: 768px) {
   .responsive-nav {
     position: absolute;
     top: 60px;
     right: 0;
-    background-color: #023d79;
+    background-color: #004080;
     flex-direction: column;
     width: 100%;
     display: none;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
   }
 
   #menu-toggle:checked + .menu-icon + .responsive-nav {
     display: flex;
-    opacity: 1;
-    transform: translateY(0);
   }
 
   .menu-icon {
     display: block;
   }
+}
