@@ -37,11 +37,23 @@ body {
 }
 
 .logo {
-  font-size: 1.8rem;
-  color: #58a6ff;
-  font-weight: 700;
-  user-select: none;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    font-size: 12px;
+    color: #007bff;
+    letter-spacing: 3px; 
+    font-weight: bold;
+    text-transform: uppercase; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); 
+    cursor: default;
+  }
+
+  .logo img {
+  width: 100px;  
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
+
 
 nav button.cta-button {
   background: #3b82f6;
@@ -146,7 +158,7 @@ nav button.cta-button:hover {
   background: #0d1117;
   padding: 30px 20px;
   text-align: center;
-  border-top: 2px solid #3b82f6;
+  border-top: 2px solid #1f01a5;
   border-bottom: 2px solid #3b82f6;
   margin: 30px auto;
   max-width: 600px;
@@ -185,10 +197,10 @@ nav button.cta-button:hover {
 }
 
 .footer-btn {
-  color: #58a6ff;
+  color: #eff1ef;
   text-decoration: none;
   font-weight: 600;
-  border: 2px solid #58a6ff;
+  border: 2px solid #0243ce;
   padding: 8px 15px;
   border-radius: 6px;
   display: flex;
@@ -241,3 +253,76 @@ footer {
     transform: rotate(360deg);
   }
 }
+
+/* Responsive Menu */
+.responsive-header {
+  background-color: #004080;
+  padding: 15px 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Cairo', sans-serif;
+
+.responsive-header .logo {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.responsive-nav {
+  display: flex;
+  gap: 15px;
+}
+
+.responsive-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: background 0.3s;
+  border-radius: 5px;
+  
+}
+
+
+.responsive-nav a:hover {
+  background-color: #0066cc;
+}
+
+/* Mobile */
+/* داخل media query */
+@media (max-width: 768px) {
+  .responsive-nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #023d79;
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  #menu-toggle:checked + .menu-icon + .responsive-nav {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .menu-icon {
+    display: block;
+  }
