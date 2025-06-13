@@ -281,6 +281,7 @@ footer {
 .responsive-nav {
   display: flex;
   gap: 15px;
+  z-index: 999;
 }
 
 .responsive-nav a {
@@ -292,7 +293,7 @@ footer {
 }
 
 .responsive-nav a:hover {
-  background-color: #0066cc;
+  background-color: #022344;
 }
 
 /* Mobile */
@@ -301,7 +302,7 @@ footer {
     position: absolute;
     top: 60px;
     right: 0;
-    background-color: #004080;
+    background-color: #3b69e6;
     flex-direction: column;
     width: 100%;
     display: none;
